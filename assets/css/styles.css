@@ -1,7 +1,56 @@
 /* Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+/* Helper classes */
+@import url('helper.css')
 
 *{
     padding: 0;
     margin: 0;
+}
+body{
+    background-color: #ffffff;
+}
+
+.caption{
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+.photo{
+    width: 100%;
+}
+.details-list{
+    list-style: none;
+}
+/* Skills */
+.skill{
+    padding: 0.5rem;
+}
+.skill strong{
+    font-size: 0.8rem;
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    background-color: #f7f8f9;
+}
+footer h2{
+    font-weight: 600;
+}
+footer .qt{
+    font-size: 1.1rem;
+    color: #45505b;
+    font-style: italic;
+}
+.social-link i{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #0563bb;
+    width: 2.6rem;
+    height: 2.6rem;
+    clip-path: circle();
+    cursor: pointer;
 }
