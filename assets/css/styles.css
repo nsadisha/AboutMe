@@ -1,7 +1,7 @@
 /* Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 /* Helper classes */
-@import url('helper.css')
+@import url('helper.css');
 
 *{
     padding: 0;
@@ -11,16 +11,43 @@ body{
     background-color: #ffffff;
 }
 
-.caption{
-    font-size: 2.1rem;
-    font-weight: 600;
+/* Cover */
+.cover{
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    display: grid;
+    align-items: center;
+    padding-left: 10rem;
 }
+.cover h1{
+    font-size: 4rem;
+    font-weight: 600;
+    color: #45505b;
+}
+.cover p{
+    font-size: 1.5rem;
+}
+.cover-links{
+    font-size: 1.4rem;
+}
+.cover-links a i{
+    color: #45505b !important;
+}
+
+/* About */
 .photo{
     width: 100%;
 }
 .details-list{
     list-style: none;
+    margin: 0;
 }
+.details-list li{
+    margin-bottom: 0.3rem;
+}
+
+
 /* Skills */
 .skill{
     padding: 0.5rem;
@@ -32,7 +59,8 @@ body{
 /* Footer */
 footer{
     text-align: center;
-    background-color: #f7f8f9;
+    background-color: #eee;
+    /* background-color: #f7f8f9; */
 }
 footer h2{
     font-weight: 600;
@@ -53,4 +81,32 @@ footer .qt{
     height: 2.6rem;
     clip-path: circle();
     cursor: pointer;
+}
+
+/* back to top */
+.back-to-top {
+    font-size: 1.1rem;
+    color: white;
+    background-color: #0563bb;
+    padding: 2rem;
+    clip-path: circle(1.4rem);
+    cursor: pointer;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+    transform: 0.2s;
+}
+.back-to-top:hover {
+    background-color: #007ff7;
+    color: white;
+}
+
+/* Responsive css */
+@media only screen and (max-width: 450px){
+    .social-link i{
+        font-size: 1.1rem;
+        width: 2.3rem;
+        height: 2.3rem;
+    }
 }
