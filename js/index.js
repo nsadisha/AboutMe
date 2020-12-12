@@ -31,17 +31,18 @@ fetch(mediumUrl).then(function(response){
 		title = e.title
 		link = e.link
 		thumbnail = e.thumbnail
+		author = e.author
 		tags = e.categories
 		date = e.pubDate.split(' ')[0]
 
-		pushArticle(title, thumbnail, link, tags, date)
+		pushArticle(title, thumbnail, link, author, tags, date)
 	})
 }).catch(function(error){
 	alert("Something went wrong!\nTry refreshing your browser.")
 	console.error(error)
 })
 
-function pushArticle(_title, _thumbnail, _link, _tags, _date){
+function pushArticle(_title, _thumbnail, _link, _author, _tags, _date){
 	let template = `
 		<div class="col-lg-6 mb-3">
 			<div class="article row mx-auto">
@@ -49,7 +50,9 @@ function pushArticle(_title, _thumbnail, _link, _tags, _date){
 				</div>
 				<div class="col-md-8 mt-3 mt-md-0">
 					<a href="${_link}" target="_blank" rel="noopener noreferrer" class="title">${_title}</a>
-					<div class="categories mt-3 mt-md-2">
+					<br>
+					<strong class="text-secondary">${_author}</strong>
+					<div class="categories mt-3">
 						<ul>
 							${tags[0]?`<li><span>#</span>`+tags[0]+'</li>':''}
 							${tags[1]?`<li><span>#</span>`+tags[1]+'</li>':''}
