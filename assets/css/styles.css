@@ -10,6 +10,9 @@
 body{
     background-color: #ffffff;
 }
+a{color: black;}
+a:hover{text-decoration: none; color:#0563bb}
+
 
 /* Cover */
 .cover{
@@ -54,6 +57,54 @@ body{
 }
 .skill strong{
     font-size: 0.8rem;
+}
+
+/* Articles */
+.article{
+    width: 100%;
+    background-color: rgba(238, 238, 238, 0.425);
+    padding: 0.5rem;
+    border: solid 1px rgb(196, 196, 196);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.article .image{
+    background-size: cover;
+    background-position: center;
+    height: 13rem;
+    transition: 0.2s;
+}
+.article .image:hover{
+    opacity: 0.8;
+}
+.article .title{
+    font-size: 1.3rem;
+}
+.article .categories ul{
+    list-style: none;
+    display: flex;
+    overflow-wrap: break-word;
+}
+.article .categories li{
+    background-color: #eee;
+    height: min-content;
+    padding: 1px 2px;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    cursor: default;
+    overflow-wrap: normal;
+    word-wrap: normal;
+}
+.article .categories li span{
+    color: rgb(141, 141, 141);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.article .date{
+    cursor: default;
 }
 
 /* Footer */
@@ -103,9 +154,13 @@ footer .qt{
 }
 
 /* Responsive css */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .cover h1{
         font-size: 3rem;
+    }
+
+    .article .image{
+        height: 18rem;
     }
 }
 @media only screen and (max-width: 450px){
