@@ -119,3 +119,22 @@ function pushRepo(_repo, _url, _description, _language, _stars, _forks){
 	`
 	repos.innerHTML += template
 }
+
+// Contact Me
+let form = document.getElementById('contactMe')
+form.addEventListener('submit', (e) =>{
+	e.preventDefault()
+	let name = form.name.value
+	let email = form.email.value
+	let subject = form.subject.value
+	let messege = form.messege.value
+
+	// creating the email body
+	let body = 'Name:%20'+name+'%0A'+'Email:%20'+email+'%0A%0A'+'Messege:%20'+messege
+
+	// navigate to send an email
+	window.location = 'mailto:nsadisha@gmail.com?subject='+subject+'&body='+body
+
+	// clear the form
+	form.reset()
+})
