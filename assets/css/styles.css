@@ -64,6 +64,25 @@ a:hover{text-decoration: none; color:#0563bb}
     font-size: 0.8rem;
 }
 
+/* Projects */
+.card .card-header{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.card .card-body .card-title{
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+.card .card-body .card-text{
+    font-size: 0.95rem;
+    color: rgb(90, 90, 90);
+}
+.card .card-body a{
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem !important;
+}
+
 /* Articles */
 .article{
     width: 100%;
